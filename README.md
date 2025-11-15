@@ -62,7 +62,11 @@ beauty-buddy/
 
 ---
 
-## 🌼 Responsive Design  
+
+## 🎀 Design & Inspiration
+
+The visual elements of Beauty Buddy — including the welcome banner, color palette, and overall layout style — were designed by me using Canva.
+I also took creative inspiration from various beauty and skincare layouts found on Pinterest, online beauty blogs, and modern UI design references. These sources helped me finalize the theme, imagery, and aesthetic used throughout the website.## 🌼 Responsive Design  
 
 Built using **flexbox and media queries** to adapt layout for both:
 - Desktop screens (wide layout)
