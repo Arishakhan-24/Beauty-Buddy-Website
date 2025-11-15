@@ -1,79 +1,131 @@
-💖 Beauty Buddy - Your Beauty Advisory Website
-🌷 Overview
-Beauty Buddy is an interactive Beauty Advisory Website designed to help users learn about makeup products and choose them based on their skin type and preferences.
+# 💖 Beauty Buddy - Your Beauty Advisory Website  
+
+## 🌷 Overview  
+Beauty Buddy is an interactive Beauty Advisory Website designed to help users learn about makeup products and choose them based on their skin type and preferences.  
 It gives information about different categories of cosmetics such as foundations, lipsticks, eyeshadows, blushes, and removers — along with usage tips, shade suggestions, and product recommendations.
 
-This project is made using HTML, CSS, and JavaScript, and showcases concepts like responsive design, interactivity, image sliders, and dynamic content switching.
+This project is made using **HTML, CSS, and JavaScript**, and showcases concepts like responsive design, interactivity, image sliders, and dynamic content switching.
 
-✨ Features
-Attractive welcome page introducing the website and its purpose
-Interactive image slider showing beauty-related visuals and captions
-Detailed product listing page divided into categories (foundation, lipstick, primer, etc.)
-Each product category includes images, texture, best skin type, and usage tips
-Shade and Pro Tips for different skin tones and conditions
-Skin Type Summary Table showing product recommendations based on skin types
-Pro Tip toggle section that teaches users how to check their skin type
-Direct shopping links to Nykaa, Sephora, Ulta, Tira, and Purplle
-Fully responsive design that works on mobile screens
-Smooth page toggle animation using JavaScript
-🧴 Technologies Used
-Technology	Purpose
-HTML5	Structure and content of the website
-CSS3	Styling, layout design, gradients, responsiveness
-JavaScript	Interactivity (slider, button functions, toggling displays)
-Google Fonts	Elegant typography (Edu NSW ACT Cursive & Poppins)
-🪷 File Structure
-beauty-buddy/ ├── index.html # Main file (contains all HTML, CSS, and JS) ├── README.md # Description and documentation ├── images/ # Optional folder for local images (if used) └── (no other dependencies)
+---
 
-💻 How to Run
-Download or clone the project folder.
-Open the index.html file in your browser (double-click or open using “Open with Browser”).
-The website will load directly — no installation or server setup required.
-🎨 Project Flow
-The website opens with a Welcome Section and a rotating image slider.
-Clicking on “View Makeup Products” shows detailed product categories.
-Each category contains 4–5 product cards with images and short explanations.
-The bottom section includes a Skin Type Guide Table and a “How to Check Skin Type” tip panel.
-Users can click on store buttons to visit different online beauty platforms.
-🌼 Responsive Design
-Built using flexbox and media queries to adapt layout for both:
+## ✨ Features  
 
-Desktop screens (wide layout)
-Mobile screens (compact cards & stacked views)
-💡 JavaScript Functions Used
-showSlides() → Controls automatic image slider transition every 4 seconds
-showProducts() and showWelcome() → Toggle between welcome and product pages
-toggleProTip() → Show or hide the skin type pro tip section
-👩‍💻 Author
-Name: Arisha Khan
-Roll Number: 2512030
-Course: B.Tech – Computer Science and Technology
-Year: -First Year
-College: Usha Mittal Institute of Technology
+- Attractive **welcome page** introducing the website and its purpose  
+- Interactive **image slider** showing beauty-related visuals and captions  
+- Detailed **product listing** page divided into categories (foundation, lipstick, primer, etc.)  
+- Each product category includes **images, texture, best skin type, and usage tips**  
+- **Shade and Pro Tips** for different skin tones and conditions  
+- **Skin Type Summary Table** showing product recommendations based on skin types  
+- **Pro Tip toggle section** that teaches users how to check their skin type  
+- Direct **shopping links** to Nykaa, Sephora, Ulta, Tira, and Purplle  
+- Fully **responsive design** that works on mobile screens  
+- Smooth **page toggle animation** using JavaScript  
 
-📚 Future Enhancements
-Add user login / sign-up feature
-Allow users to create a saved list of favorite products
-Include video tutorials and makeup routine recommendations
-Integrate a real-time beauty product search using APIs
-📸 Screenshots:-
-– Homepage with image slider
+---
+
+## 🧴 Technologies Used  
+
+| Technology | Purpose |
+|-------------|----------|
+| **HTML5** | Structure and content of the website |
+| **CSS3** | Styling, layout design, gradients, responsiveness |
+| **JavaScript** | Interactivity (slider, button functions, toggling displays) |
+| **Google Fonts** | Elegant typography (Edu NSW ACT Cursive & Poppins) |
+
+---
+
+## 🪷 File Structure  
+
+beauty-buddy/
+├── index.html # Main file (contains all HTML, CSS, and JS)
+├── README.md # Description and documentation
+├── images/ # Optional folder for local images (if used)
+└── (no other dependencies)
+
+---
+
+## 💻 How to Run  
+
+1. Download or clone the project folder.  
+2. Open the `index.html` file in your browser (double-click or open using “Open with Browser”).  
+3. The website will load directly — no installation or server setup required.  
+
+---
+
+## 🎨 Project Flow  
+
+1. The website opens with a **Welcome Section** and a rotating **image slider**.  
+2. Clicking on **“View Makeup Products”** shows detailed product categories.  
+3. Each category contains 4–5 product cards with images and short explanations.  
+4. The bottom section includes a **Skin Type Guide Table** and a **“How to Check Skin Type”** tip panel.  
+5. Users can click on store buttons to visit different online beauty platforms.  
+
+---
+
+## 🌼 Responsive Design  
+
+Built using **flexbox and media queries** to adapt layout for both:
+- Desktop screens (wide layout)
+- Mobile screens (compact cards & stacked views)
+
+---
+
+## 💡 JavaScript Functions Used  
+
+- `showSlides()` → Controls automatic image slider transition every 4 seconds  
+- `showProducts()` and `showWelcome()` → Toggle between welcome and product pages  
+- `toggleProTip()` → Show or hide the skin type pro tip section  
+
+---
+
+## 👩‍💻 Author  
+
+**Name:** Arisha Khan  
+**Roll Number:** 2512030  
+**Course:** B.Tech – Computer Science and Technology  
+**Year:** -First Year <br>
+**College:** Usha Mittal Institute of Technology  
+
+---
+
+## 📚 Future Enhancements  
+
+- Add user login / sign-up feature  
+- Allow users to create a saved list of favorite products  
+- Include video tutorials and makeup routine recommendations  
+- Integrate a real-time beauty product search using APIs  
+
+---
+
+## 📸 Screenshots:-  
+ – Homepage with image slider  <br>
+- <img width="1919" height="978" alt="image" src="https://github.com/user-attachments/assets/50628083-e776-4da2-b14b-303934aa7d0f" />
+
+ – Product listing section <br>
+- <img width="1019" height="874" alt="image" src="https://github.com/user-attachments/assets/149a65cf-c384-4324-8796-b29aba3f62b6" />
+- <img width="848" height="842" alt="image" src="https://github.com/user-attachments/assets/d52822c1-d8bb-4c53-aa28-9d57afa2ec02" />
+- <img width="884" height="874" alt="image" src="https://github.com/user-attachments/assets/3eb195aa-0541-4283-b91a-726bca83e53b" />
+- <img width="842" height="571" alt="image" src="https://github.com/user-attachments/assets/a83b6d39-925c-4a80-8ed1-f665746b87c6" />
+
+ – Table and pro tip panel <br>
+- <img width="826" height="343" alt="image" src="https://github.com/user-attachments/assets/d6ed9cfa-3bf2-4f5c-97bd-7fa10df13e32" />
+- <img width="834" height="377" alt="image" src="https://github.com/user-attachments/assets/f5032d51-8e8a-474a-9132-b3835f6f150b" />
+
+ – Link Section <br>
+<img width="806" height="100" alt="image" src="https://github.com/user-attachments/assets/2f39911d-cc9a-4932-97a8-1ae7727a9cb4" />
 
 
-– Product listing section
 
 
-– Table and pro tip panel
+---
 
+## 🪞 Purpose  
 
-– Link Section
+This website was created as a **final project for the CodeIgnite: The First Commit hackathon**, organized by the SNDT ACM-W Student Chapter.  
+It demonstrates practical skills learned during the bootcamp:  
+- HTML/CSS structure
+- Applying responsive layouts and visual design
+- Adding interactive features with JavaScript
+- Creating a friendly, informative
+---
 
-
-🪞 Purpose
-This website was created as a final project for the CodeIgnite: The First Commit hackathon, organized by the SNDT ACM-W Student Chapter.
-It demonstrates practical skills learned during the bootcamp:
-
-HTML/CSS structure
-Applying responsive layouts and visual design
-Adding interactive features with JavaScript
-Creating a friendly, informative
