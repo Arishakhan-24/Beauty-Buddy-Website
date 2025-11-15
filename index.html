@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beauty Advisory Website</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /*  Page Base Styling */
+    body {
+      font-family: "Edu NSW ACT Cursive", cursive;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      background: linear-gradient(to bottom right, #fff0f5, #ffd6eb); /* soft baby pink background */
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Main Container Styling */
+    .container {
+      max-width: 980px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 28px 24px;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px #0001;
+    }
+
+    h1, h2, h3 {
+      color: #925981;
+    }
+
+    .welcome {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    button {
+      background: #e379c7;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 24px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 24px;
+    }
+
+    button:hover {
+      background: #d05cb2;
+    }
+
+    /* 🌷 Category / Card Styling */
+    .category {
+      margin-bottom: 40px;
+    }
+
+    .types {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin: 20px 0;
+    }
+
+    .type-card {
+      background: #fbeaf7;
+      border-radius: 9px;
+      box-shadow: 0 1px 10px #e4c5de2c;
+      padding: 16px 14px;
+      text-align: center;
+      width: 190px;
+    }
+
+    .type-card img {
+      max-width: 110px;
+      max-height: 75px;
+      border-radius: 7px;
+    }
+
+    .type-card h4 {
+      margin: 10px 2px 9px 2px;
+      font-size: 16px;
+      color: #925981;
+    }
+
+    .type-card p, .type-card ul {
+      font-size: 14px;
+      color: #61556b;
+      text-align: left;
+      margin: 9px 0 0 0;
+    }
+
+    .shade-tip {
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: 18px 0 0 0;
+    }
+
+    th, td {
+      border: 1px solid #e4c5de;
+      padding: 8px;
+    }
+
+    th {
+      background: #f2d8ea;
+      color: #7b3970;
+    }
+
+    .skintype-table th, .skintype-table td {
+      font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+      .container { padding: 7px; }
+      .types { gap: 10px; }
+      .type-card { width: 120px; }
+      .type-card img { max-width: 60px; }
+    }
+
+    /*  IMAGE SLIDER STYLING  */
+    .image-slider {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+    }
+
+    .slide img {
+      width: 1200px;
+      height: 400px;
+      border-radius: 15px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .caption {
+      font-family: 'Poppins', sans-serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: #ff9ecd;
+      margin-top: 40px; 
+      text-shadow: 0 2px 6px rgba(255,158,205,0.3);
+      display: inline-block;
+      background-color: rgba(80, 80, 80, 0.2);
+      padding: 10px 25px;
+      border-radius: 8px;
+    }
+
+    .fade {
+      animation-name: fade;
+      animation-duration: 1s;
+    }
+
+    @keyframes fade {
+      from { opacity: 0.4; }
+      to { opacity: 1; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ==== IMAGE SLIDER START ===== -->
+  <section class="image-slider">
+  <div class="slide fade">
+    <img src="image.jpg" alt="Makeup Image 1" style="width: 100%; height: 400px; object-fit: cover;">
+    <div class="caption">Discover Makeup Basics</div>
+  </div>
+
+    <div class="slide fade">
+      <img src="https://i.pinimg.com/1200x/cf/e9/6a/cfe96aca38b049ddbfde022d92fbeec8.jpg" alt="Makeup Image 2">
+      <div class="caption">Learn Skin Type Based Products</div>
+    </div>
+
+    <div class="slide fade">
+      <img src="https://i.pinimg.com/1200x/53/b2/12/53b212b6a79f9a4b8db50003f9c49330.jpg" alt="Makeup Image 3">
+      <div class="caption">Step Into The World of Beauty</div>
+    </div>
+
+  </section>
+  <!-- ======== 🌷 IMAGE SLIDER END ======== -->
+   
+   <div class="container" 
+     style="text-align:center; padding:60px; background:#b5aac1; border-radius:20px;">
+  <h1 class="welcome" 
+      style="font-family:'Poppins', cursive;
+             font-size:4rem;
+             font-weight:700;
+             background:linear-gradient(270deg, #85689f, #9e4074, #b483f0);
+             background-size:400% 400%;
+             background-clip: text;
+             -webkit-background-clip:text;
+             -webkit-text-fill-color:transparent;
+             animation:textGradient 5s ease infinite;
+             text-shadow:0 0 15px rgba(198, 171, 211, 0.3);
+             margin:0;">
+    Beauty Buddy
+  </h1>
+
+  <style>
+    @keyframes textGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+         </div> 
+     </div>
+  <!-- JavaScript  -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      const slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 4000); // change every 4 seconds
+    }
+  </script>
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Welcome Page -->
+    <div id="welcomePage">
+      <div class="welcome">
+        <h2>Welcome to Beauty Advisory Website</h2>
+        <p>Hello! Here you’ll find complete information on makeup products. Every product and its types are shown with images and easy tips with Skin type Guide and  Pro Tips. Click "View Makeup Products" to explore all!</p>
+        <button onclick="showProducts()">View Makeup Products</button>
+      </div>
+    </div>
+
+    <div id="productsPage" style="display:none;">
+      <button onclick="showWelcome()" 
+        style="margin:10px; background:#925981; color:#ffffff; padding:12px 24px; border:none; border-radius:8px; cursor:pointer;">
+        Back
+      </button>
+      <h2>All Makeup Products & Types</h2>
+
+      <!-- FOUNDATION CATEGORY -->
+      <div class="category">
+        <h3>💄 Foundation</h3>
+        <div class="types">
+          <div class="type-card">
+            <img src="https://i.pinimg.com/736x/e8/6f/d7/e86fd7d5c89b72ada65192e3b19b6bae.jpg" alt="Liquid Foundation">
+            <h4>Liquid Foundation</h4>
+            <p><b>Texture:</b> Fluid<br><b>Best For:</b> All skin types<br><b>Description:</b> Gives natural to full coverage. Matte for oily skin, Dewy for dry skin.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/3/5/3553d6cKAYBE00001531_1.jpg" alt="Cream Foundation">
+            <h4>Cream Foundation</h4>
+            <p><b>Texture:</b> Thick<br><b>Best For:</b> Dry to normal skin<br><b>Description:</b> Full coverage, hydrating.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/9/19b50528906090492874_01.jpg" alt="Stick Foundation">
+            <h4>Stick Foundation</h4>
+            <p><b>Texture:</b> Solid<br><b>Best For:</b> Normal to oily skin<br><b>Description:</b> Easy to apply, travel-friendly.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/e/e/ee6ebaeMAYBE00001314_1.jpg" alt="Powder Foundation">
+            <h4>Powder Foundation</h4>
+            <p><b>Texture:</b> Powder<br><b>Best For:</b> Oily / combination skin<br><b>Description:</b> Controls oil, gives matte finish.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/7/a/7a08940LOREA00000659_1.jpg" alt="Serum/Tinted Foundation">
+            <h4>Serum/Tinted Foundation</h4>
+            <p><b>Texture:</b> Light liquid<br><b>Best For:</b> Dry / normal skin<br><b>Description:</b> Very natural look, lightweight.</p>
+          </div>
+        </div>
+        <div class="shade-tip"><b>🎨💁‍♀️ Shade Tip:</b>  Match foundation to your jawline or neck , not your hand ✋.</div>
+      </div>
+
+      <!-- LIPSTICK CATEGORY -->
+      <div class="category">
+        <h3>💋 Lipstick</h3>
+        <div class="types">
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/6/a/6a307f96902395682806_1.jpg" alt="Matte Lipstick">
+            <h4>Matte</h4>
+            <p><b>Finish:</b> No shine<br><b>Best For:</b> Oily lips<br><b>Description:</b> Long-lasting, bold color.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/4/54bfcec3600524105198_1.jpg" alt="Cream Lipstick">
+            <h4>Cream</h4>
+            <p><b>Finish:</b> Slight shine<br><b>Best For:</b> Dry lips<br><b>Description:</b> Moisturizing with medium coverage.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/4/7/47e3cf9MAYBE00000403z_1.jpg" alt="Glossy Lipstick">
+            <h4>Glossy</h4>
+            <p><b>Finish:</b> Shiny<br><b>Best For:</b> All lips (esp. dry)<br><b>Description:</b> Hydrating and plumping.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/6/6/668c92bCHAAA00000813_1.jpg" alt="Liquid Lipstick">
+            <h4>Liquid Lipstick</h4>
+            <p><b>Finish:</b> Matte or glossy<br><b>Best For:</b> All skin types<br><b>Description:</b> Very long wear, intense color.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/a/4/a4bed56KAYBE00000226_1.jpg" alt="Tint/Stain">
+            <h4>Tint / Stain</h4>
+            <p><b>Finish:</b> Sheer<br><b>Best For:</b> Natural look<br><b>Description:</b> Gives a light tint, very natural.</p>
+          </div>
+        </div>
+        <div class="shade-tip"><b>🎨 Shade Tip::</b><br>
+        
+         👩‍🦳  Fair skin → Nudes, pinks, peaches 🌸🍑 <br>
+         🧑 Medium skin → Rose, mauve, berry 🌹💖<br>
+          🏽 Dusky skin → Wine, plum, brick red 🍷💜🧱
+        </div>
+      </div>
+
+      <!-- LIP GLOSS CATEGORY -->
+      <div class="category">
+        <h3>💧 Lip Gloss</h3>
+        <div class="types">
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/2/f285e648904418911380_1.jpg" alt="Clear Gloss">
+            <h4>Clear Gloss</h4>
+            <p>Adds shine, can layer over lipstick.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/e/fe13a82MAYBE00000380_1.jpg" alt="Tinted Gloss">
+            <h4>Tinted Gloss</h4>
+            <p>Gives light color + shine.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/c/5cc072bMAKEU00000587_1.jpg" alt="Shimmer Gloss">
+            <h4>Shimmer Gloss</h4>
+            <p>Adds sparkle, best for parties.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/4/e/4e02279THEDO00000022_1.jpg" alt="Oil-based Gloss">
+            <h4>Oil-based Gloss</h4>
+            <p>Moisturizing and non-sticky.</p>
+          </div>
+        </div>
+        <div class="shade-tip"><b>Best for:</b> Dry lips, or anyone who wants a juicy glossy finish.💧💋✨</div>
+      </div>
+
+      <!-- PRIMER CATEGORY -->
+      <div class="category">
+        <h3>✨ Face Oil / Primer</h3>
+        <div class="types">
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/a/3/a398c60MAYBE00000026-newadd_1.jpg" alt="Mattifying Primer">
+            <h4>Mattifying Primer</h4>
+            <p><b>Best For:</b> Oily skin<br><b>Function:</b> Controls shine, blurs pores.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/d/8/d8067e0ELFCO00000600pdp_1.jpg" alt="Hydrating Primer">
+            <h4>Hydrating Primer / Oil</h4>
+            <p><b>Best For:</b> Dry skin<br><b>Function:</b> Moisturizes, gives glow.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/e/8e79020602004057280_1.jpg" alt="Pore-filling Primer">
+            <h4>Pore-filling Primer</h4>
+            <p><b>Best For:</b> Combination skin<br><b>Function:</b> Smooths texture.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- EYESHADOW CATEGORY -->
+      <div class="category">
+        <h3>🌸 Eyeshadow</h3>
+        <div class="types">
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/e/0/e0cd52eNYKAC00000370-az_1.jpg" alt="Powder Eyeshadow">
+            <h4>Powder Eyeshadow</h4>
+            <p><b>Texture:</b> Pressed powder<br><b>Use:</b> Easy to blend, good for beginners.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/a/b/abffdf38901030968747_1.jpg" alt="Cream Eyeshadow">
+            <h4>Cream Eyeshadow</h4>
+            <p><b>Texture:</b> Creamy<br><b>Use:</b> Long-lasting, great for bold looks.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/a/8/a881ff8INSIG00000895_1r.jpg" alt="Liquid Eyeshadow">
+            <h4>Liquid Eyeshadow</h4>
+            <p><b>Texture:</b> Liquid<br><b>Use:</b> Gives metallic or glittery finish.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/4/147f7b48904325003468_1a.jpg" alt="Loose Pigment">
+            <h4>Loose Pigment</h4>
+            <p><b>Texture:</b> Powder<br><b>Use:</b> Intense color, used for glam makeup.</p>
+          </div>
+        </div>
+        <div class="shade-tip"><b>✨ Shade Tip::</b><br>
+           🌸 Fair skin → Soft pinks 🌷, champagne 🥂, taupe 🤍<br>
+           🌞 Medium skin → Copper 🧡, bronze 🪙, rose gold 🌹<br>
+           🌙 Dusky skin → Deep plum 🍇, gold 💛, emerald 💚, navy 💙
+        </div>
+      </div>
+      
+      <!-- BLUSH CATEGORY -->
+      <div class="category">
+        <h3>🪞 Blush</h3>
+        <div class="types">
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/6/f674195MARSX00000389-new_1.jpg" alt="Powder Blush">
+            <h4>Powder Blush</h4>
+            <p>Oily or normal skin.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/9/0/90c141bPIXIX00000122_1.jpg" alt="Cream Blush">
+            <h4>Cream Blush</h4>
+            <p>Dry skin, gives dewy glow.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/2/6/26fb772FAEBE00000141_1.jpg" alt="Liquid Blush">
+            <h4>Liquid Blush</h4>
+            <p>Long-lasting, suits all.</p>
+          </div>
+        </div>
+        <div class="shade-tip"><b>Shade Tip:</b><br>
+         💁🏻‍♀️Fair: Soft pink / peach.<br>
+         💁🏽‍♀️ Medium: Rose / coral.<br>
+         💁🏿‍♀️ Dusky: Deep berry / brick.
+        </div>
+      </div>
+
+      <!-- HIGHLIGHTER CATEGORY -->
+      <div class="category">
+        <h3>🌟 Highlighter</h3>
+        <div class="types">
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/a/3/a398c6041554538281-newadd_1.jpg" alt="Powder Highlighter">
+            <h4>Powder Highlighter</h4>
+            <p>Oily skin.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/a/4/a4bed56KAYBE00000707_1.jpg" alt="Liquid or Cream Highlighter">
+            <h4>Liquid / Cream Highlighter</h4>
+            <p>Dry or normal skin.</p>
+          </div>
+        </div>
+        <div class="shade-tip"><b> ✨💁‍♀️ Purpose:</b>Adds glow to the high points of your face 💫 (cheekbones, nose bridge, and cupid’s bow) ✨</div>
+      </div>
+
+      <!-- MAKEUP REMOVER CATEGORY -->
+      <div class="category">
+        <h3>🧴 Makeup Remover</h3>
+        <div class="types">
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/5/85c53096928820029589_1.jpg" alt="Micellar Water">
+            <h4>Micellar Water</h4>
+            <p><b>Best For:</b> All skin types<br><b>Example:</b> Garnier, Bioderma.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/8/f8296858906118410347_1.jpg" alt="Cleansing Balm/Oil">
+            <h4>Cleansing Balm / Oil</h4>
+            <p><b>Best For:</b> Heavy makeup, dry skin<br><b>Example:</b> Clinique Take The Day Off Balm.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/9/9/9974f38MARSX00000849_1.jpg" alt="Wipes">
+            <h4>Wipes (not daily use)</h4>
+            <p><b>Best For:</b> Quick clean-up<br><b>Example:</b> Neutrogena wipes.</p>
+          </div>
+          <div class="type-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/6/5614f678809925173941_1.jpg" alt="Gel Cleanser">
+            <h4>Gel Cleanser</h4>
+            <p><b>Best For:</b> Oily skin<br><b>Description:</b> Removes oil-based makeup.</p>
+          </div>
+        </div>
+        <div class="shade-tip"><b>🧴💦 Tip:</b>  Always double cleanse — Remove makeup (micellar water / cleansing balm) ✨ & wash face with gentle facewash 🧼💧.</div>
+      </div>
+
+      <!-- SKIN TYPE GUIDE SUMMARY -->
+      
+<div class="category">
+  <h3 style="text-align:center; color:#b04c89; font-size:26px;">💆‍♀️ Skin Type Guide Summary</h3>
+  
+  <table class="skintype-table" style="width:100%; border-collapse:collapse; margin-top:20px; box-shadow:0 0 15px #e4c5de7a; border-radius:10px; overflow:hidden;">
+    <thead>
+      <tr style="background:#f9e0ef; color:#7b3970; text-align:center;">
+        <th>🌸 Skin Type</th>
+        <th>💄 Best Foundation</th>
+        <th>💋 Best Lip Product</th>
+        <th>✨ Best Primer</th>
+        <th>🧴 Best Makeup Remover</th>
+      </tr>
+    </thead>
+    <tbody style="background:#fff; color:#5e4a64; font-size:15px;">
+      <tr style="background:#fdf3f9;">
+        <td>🌷 Dry</td>
+        <td>Liquid / Cream Foundation 💧<br><small>(Adds glow & hydration)</small></td>
+        <td>Gloss / Cream Lipstick 💖</td>
+        <td>Hydrating Primer / Face Oil 🪷</td>
+        <td>Cleansing Balm 🫧</td>
+      </tr>
+      <tr style="background:#fff8fc;">
+        <td>🌼 Oily</td>
+        <td>Powder / Matte Liquid 🧁<br><small>(Controls shine)</small></td>
+        <td>Matte Lipstick 💅</td>
+        <td>Mattifying Primer 🌿</td>
+        <td>Micellar Water 💧</td>
+      </tr>
+      <tr style="background:#fdf3f9;">
+        <td>🌻 Combination</td>
+        <td>Stick / Satin Finish 💫</td>
+        <td>Any type 🌸</td>
+        <td>Pore-filling Primer 🎯</td>
+        <td>Micellar Water 💦</td>
+      </tr>
+      <tr style="background:#fff8fc;">
+        <td>🌹 Sensitive</td>
+        <td>Lightweight / Serum Foundation 🪶</td>
+        <td>Natural / Organic 💐</td>
+        <td>Aloe-based Primer 🍃</td>
+        <td>Gentle Micellar Water 🌱</td>
+      </tr>
+    </tbody>
+  </table>
+     </div>
+     <!-- PRO TIP: HOW TO CHECK SKIN TYPE -->
+<div class="protip-section">
+  <button onclick="toggleProTip()">Show Pro Tip: Check Your Skin Type</button>
+  <div id="protip" class="protip-content" style="display:none; margin-top:20px; background:#fbeaf7; padding:20px; border-radius:10px; color:#5a4562; font-size:16px; line-height:1.6;">
+    <h3>💡 How to Check Your Skin Type</h3>
+    <p><b>Step 1:</b> Wash your face with a gentle cleanser and pat dry.</p>
+    <p><b>Step 2:</b> Leave your skin bare (no moisturizer or product) for 1 hour.</p>
+    <p><b>Step 3:</b> After an hour, observe:</p>
+    <ul style="text-align:left; display:inline-block;">
+      <li><b>Oily Skin:</b> Shiny on forehead, nose, and cheeks.</li>
+      <li><b>Dry Skin:</b> Feels tight, flaky, or rough.</li>
+      <li><b>Combination Skin:</b> Oily T-zone (forehead/nose/chin) but dry cheeks.</li>
+      <li><b>Normal Skin:</b> Feels balanced, not too oily or dry.</li>
+      <li><b>Sensitive Skin:</b> Redness or irritation after cleansing.</li>
+    </ul>
+  </div>
+  <!--  SHOPPING LINKS -->
+<div class="shop-links" style="margin-top:20px; text-align:center;">
+  <h3 style="color:#b04c89;">🛍️ Explore Beauty Platforms</h3>
+  <button onclick="window.open('https://www.nykaa.com', '_blank')" 
+        style="margin:10px; background:#925981; color:#ffffff; padding:12px 24px; border:none; border-radius:8px; cursor:pointer;">
+  Nykaa
+</button>
+
+<button onclick="window.open('https://www.sephora.com', '_blank')" 
+        style="margin:10px; background:#925981; color:#ffffff; padding:12px 24px; border:none; border-radius:8px; cursor:pointer;">
+  Sephora
+</button>
+
+<button onclick="window.open('https://www.ulta.com', '_blank')" 
+        style="margin:10px; background:#925981; color:#ffffff; padding:12px 24px; border:none; border-radius:8px; cursor:pointer;">
+  Ulta
+</button>
+
+<button onclick="window.open('https://www.myntra.com/beauty', '_blank')" 
+        style="margin:10px; background:#925981; color:#ffffff; padding:12px 24px; border:none; border-radius:8px; cursor:pointer;">
+  Tira
+</button>
+
+<button onclick="window.open('https://www.purple.com', '_blank')" 
+        style="margin:10px; background:#925981; color:#ffffff; padding:12px 24px; border:none; border-radius:8px; cursor:pointer;">
+  Purple
+</button>
+
+</div>
+
+</div>
+
+<script>
+  function toggleProTip() {
+    const tip = document.getElementById("protip");
+    tip.style.display = (tip.style.display === "block") ? "none" : "block";
+  }
+</script>
+
+    </div>
+
+  </div>
+  
+
+  <script>
+    function showProducts() {
+      document.getElementById('welcomePage').style.display = 'none';
+      document.getElementById('productsPage').style.display = '';
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+    function showWelcome() {
+      document.getElementById('productsPage').style.display = 'none';
+      document.getElementById('welcomePage').style.display = '';
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+  </script>
+</body>
+</html>
